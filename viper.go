@@ -1866,3 +1866,9 @@ func (v *Viper) Debug() {
 	fmt.Printf("Config:\n%#v\n", v.config)
 	fmt.Printf("Defaults:\n%#v\n", v.defaults)
 }
+
+// GetConfigFile - lookup for config file to be used
+func GetConfigFile() (string, error) { return v.getConfigFile() }
+func (v *Viper) GetConfigFile() (string, error) {
+	return v.getConfigFile()
+}
